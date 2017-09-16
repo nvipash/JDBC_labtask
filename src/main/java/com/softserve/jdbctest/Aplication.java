@@ -28,12 +28,14 @@ public class Aplication {
             statement=connection.createStatement();
             //endregion
 
+            readData();
+
+            //updateDataCity();
             //readData();
 
-            updateDataCity();
-            //readData();
+            //insertDataCity();
 
-            insertDataCity();
+            //DeleteDataCity();
 
 
         } catch (ClassNotFoundException e) {
@@ -52,8 +54,7 @@ public class Aplication {
         }
     }
 
-    private static void readData() {
-        try {
+    private static void readData() throws SQLException {
 //region    SELECT COUNT(*) FROM Person //
             // 3. executing SELECT query
             rs=statement.executeQuery("SELECT COUNT(*) FROM Person");
@@ -138,14 +139,9 @@ public class Aplication {
             }
             //endregion
 
-        } catch (SQLException ex) {
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
-        }
     }
 
-    private static void updateDataCity(){
+    private static void updateDataCity() throws SQLException {
         Scanner input = new Scanner(System.in);
         System.out.println("Input name city what you want to update: ");
         String city = input.next();
@@ -153,29 +149,50 @@ public class Aplication {
         String citynew = input.next();
 
         // 3. executing SELECT query
-        try {
 // 1
-            statement.execute("UPDATE city SET City='"+citynew+"' WHERE City='"+city+"';");
+        statement.execute("UPDATE city SET City='"+citynew+"' WHERE City='"+city+"';");
 
 // 2  Returns count of updated rows
-//            int n=statement.executeUpdate("UPDATE city SET City='"+citynew+"' WHERE City='"+city+"';");
-//            System.out.println("Count rows that updated: "+n);
+//        int n=statement.executeUpdate("UPDATE city SET City='"+citynew+"' WHERE City='"+city+"';");
+//        System.out.println("Count rows that updated: "+n);
 
 // 3  PreparedStatements can use variables and are more efficient
-//            PreparedStatement preparedStatement;
-//            preparedStatement=connection.prepareStatement("UPDATE city SET City=? WHERE City=?;");
-//            preparedStatement.setString(1, citynew);
-//            preparedStatement.setString(2, city);
-//            int n=preparedStatement.executeUpdate();
-//            System.out.println("Count rows that updated: "+n);
-
-        } catch (SQLException e) { e.printStackTrace(); }
-
+//        PreparedStatement preparedStatement;
+//        preparedStatement=connection.prepareStatement("UPDATE city SET City=? WHERE City=?;");
+//        preparedStatement.setString(1, citynew);
+//        preparedStatement.setString(2, city);
+//        int n=preparedStatement.executeUpdate();
+//        System.out.println("Count rows that updated: "+n);
 
     }
 
-    private static void insertDataCity(){
+    private static void insertDataCity() throws SQLException {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a new name city: ");
+        String newcity = input.next();
 
+        // 3. executing SELECT query
+        //   PreparedStatements can use variables and are more efficient
+        PreparedStatement preparedStatement;
+        preparedStatement=connection.prepareStatement("INSERT city VALUES (?)");
+        preparedStatement.setString(1, newcity);
+        int n=preparedStatement.executeUpdate();
+        System.out.println("Count rows that inserted: "+n);
+
+    }
+
+    private static void DeleteDataCity() throws SQLException {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a name city for delete: ");
+        String city = input.next();
+
+        // 3. executing SELECT query
+        //   PreparedStatements can use variables and are more efficient
+        PreparedStatement preparedStatement;
+        preparedStatement=connection.prepareStatement("DELETE FROM city WHERE City=?");
+        preparedStatement.setString(1, city);
+        int n=preparedStatement.executeUpdate();
+        System.out.println("Count rows that deleted: "+n);
     }
 
 
