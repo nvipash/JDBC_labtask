@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a907c3a-731c-46cd-a342-cdbc38654ac5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.keystream" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.keystream.len" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.len" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.values.at" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata_i" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata_i.len" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_src_/schema/db_jdbc.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/storage.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/DataBase.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/softserve/jdbctest/Aplication.class" afterPath="$PROJECT_DIR$/target/classes/com/softserve/jdbctest/Aplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softserve/jdbctest/Aplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/jdbctest/Aplication.java" />
     </list>
@@ -37,24 +48,34 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="db_jdbc@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="db_jdbc" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_jdbc@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_jdbc" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
         <item name="book" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="db_jdbc@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="db_jdbc" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
         <item name="city" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="db_jdbc@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="db_jdbc" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
         <item name="person" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="db_jdbc@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="db_jdbc" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
         <item name="personbook" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
@@ -65,48 +86,41 @@
       <file leaf-file-name="Aplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softserve/jdbctest/Aplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+            <state relative-caret-position="656">
+              <caret line="199" column="81" lean-forward="false" selection-start-line="199" selection-start-column="81" selection-end-line="199" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#631#677#0" expanded="false" />
                 <element signature="e#778#809#0" expanded="false" />
                 <element signature="method#readData#0;class#Aplication#0" expanded="false" />
-                <element signature="e#2279#2314#0" expanded="false" />
-                <element signature="e#3118#3151#0" expanded="false" />
-                <element signature="e#3889#3922#0" expanded="false" />
-                <element signature="e#4412#4451#0" expanded="false" />
+                <element signature="e#1920#1962#0" expanded="false" />
+                <element signature="e#2330#2365#0" expanded="false" />
+                <element signature="e#3169#3202#0" expanded="false" />
+                <element signature="e#3940#3973#0" expanded="false" />
+                <element signature="e#4463#4502#0" expanded="false" />
                 <element signature="method#updateDataCity#0;class#Aplication#0" expanded="false" />
                 <element signature="method#insertDataCity#0;class#Aplication#0" expanded="false" />
-                <marker date="1505573386711" expanded="true" signature="1992:2019" ph="SELECT COUNT... Person" />
-                <marker date="1505573386711" expanded="true" signature="2395:2415" ph="SELECT * FRO... Person" />
-                <marker date="1505573386711" expanded="true" signature="3232:3250" ph="SELECT * FRO... Book" />
-                <marker date="1505573386711" expanded="true" signature="4003:4021" ph="SELECT * FRO... City" />
-                <marker date="1505573386711" expanded="true" signature="4519:4605" ph="Select (SELE... " />
-                <marker date="1505573386711" expanded="true" signature="4519:4744" ph="Select * FRO... personbook" />
-                <marker date="1505573386711" expanded="true" signature="4519:4749" ph="Select (SELE... personbook" />
-                <marker date="1505573386711" expanded="true" signature="4552:4604" ph="SELECT Surna... person" />
-                <marker date="1505573386711" expanded="true" signature="4644:4691" ph="SELECT BookN... book" />
-                <marker date="1505573386711" expanded="true" signature="5707:5753" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="5707:5763" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="5846:5867" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="5846:5902" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="6139:6162" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="6139:6174" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="6139:6175" ph="UPDATE city " />
-                <marker date="1505573386711" expanded="true" signature="6814:6836" ph="INSERT city... " />
-                <marker date="1505573386711" expanded="true" signature="7426:7455" ph="DELETE FROM " />
+                <element signature="method#DeleteDataCity#0;class#Aplication#0" expanded="false" />
+                <element signature="method#CallProcedureForInsertToPersonBook#0;class#Aplication#0" expanded="false" />
+                <marker date="1505580001528" expanded="true" signature="2043:2070" ph="SELECT COUNT... Person" />
+                <marker date="1505580001528" expanded="true" signature="2446:2466" ph="SELECT * FRO... Person" />
+                <marker date="1505580001528" expanded="true" signature="3283:3301" ph="SELECT * FRO... Book" />
+                <marker date="1505580001528" expanded="true" signature="4054:4072" ph="SELECT * FRO... City" />
+                <marker date="1505580001528" expanded="true" signature="4570:4656" ph="Select (SELE... " />
+                <marker date="1505580001528" expanded="true" signature="4570:4795" ph="Select * FRO... personbook" />
+                <marker date="1505580001528" expanded="true" signature="4570:4800" ph="Select (SELE... personbook" />
+                <marker date="1505580001528" expanded="true" signature="4603:4655" ph="SELECT Surna... person" />
+                <marker date="1505580001528" expanded="true" signature="4695:4742" ph="SELECT BookN... book" />
+                <marker date="1505580001528" expanded="true" signature="5758:5804" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="5758:5814" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="5897:5918" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="5897:5953" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="6190:6213" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="6190:6225" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="6190:6226" ph="UPDATE city " />
+                <marker date="1505580001528" expanded="true" signature="6865:6887" ph="INSERT city... " />
+                <marker date="1505580001528" expanded="true" signature="7477:7506" ph="DELETE FROM " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -244,6 +258,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\AndriiJDBC\src\test\resources" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -373,7 +392,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505502036666</updated>
-      <workItem from="1505502038532" duration="19053000" />
+      <workItem from="1505502038532" duration="22730000" />
     </task>
     <task id="LOCAL-00001" summary="Create new project JDBC Driver">
       <created>1505571687635</created>
@@ -382,15 +401,21 @@
       <option name="project" value="LOCAL" />
       <updated>1505571687635</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add DataBase.sql">
+      <created>1505578412118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505578412118</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19053000" />
+    <option name="totallyTimeSpent" value="22730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -400,9 +425,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15436241" sideWeight="0.502445" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29753914" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18903804" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1901566" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1901566" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -456,7 +481,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create new project JDBC Driver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create new project JDBC Driver" />
+    <MESSAGE value="Add DataBase.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add DataBase.sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,32 +499,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/d0374fc/7c091cad-7800-4d48-acaf-48b96ed61ab7/db_jdbc.personbook">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/d0374fc/7c091cad-7800-4d48-acaf-48b96ed61ab7/db_jdbc.book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/d0374fc/7c091cad-7800-4d48-acaf-48b96ed61ab7/db_jdbc.person">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -525,39 +530,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/d0374fc/7c091cad-7800-4d48-acaf-48b96ed61ab7/db_jdbc.personbook">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/d0374fc/7c091cad-7800-4d48-acaf-48b96ed61ab7/db_jdbc.book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/d0374fc/7c091cad-7800-4d48-acaf-48b96ed61ab7/db_jdbc.person">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/DataBase.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="3" selection-end-line="73" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softserve/jdbctest/Aplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+        <state relative-caret-position="656">
+          <caret line="199" column="81" lean-forward="false" selection-start-line="199" selection-start-column="81" selection-end-line="199" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#631#677#0" expanded="false" />
             <element signature="e#778#809#0" expanded="false" />
             <element signature="method#readData#0;class#Aplication#0" expanded="false" />
-            <element signature="e#2279#2314#0" expanded="false" />
-            <element signature="e#3118#3151#0" expanded="false" />
-            <element signature="e#3889#3922#0" expanded="false" />
-            <element signature="e#4412#4451#0" expanded="false" />
+            <element signature="e#1920#1962#0" expanded="false" />
+            <element signature="e#2330#2365#0" expanded="false" />
+            <element signature="e#3169#3202#0" expanded="false" />
+            <element signature="e#3940#3973#0" expanded="false" />
+            <element signature="e#4463#4502#0" expanded="false" />
             <element signature="method#updateDataCity#0;class#Aplication#0" expanded="false" />
             <element signature="method#insertDataCity#0;class#Aplication#0" expanded="false" />
-            <marker date="1505573386711" expanded="true" signature="1992:2019" ph="SELECT COUNT... Person" />
-            <marker date="1505573386711" expanded="true" signature="2395:2415" ph="SELECT * FRO... Person" />
-            <marker date="1505573386711" expanded="true" signature="3232:3250" ph="SELECT * FRO... Book" />
-            <marker date="1505573386711" expanded="true" signature="4003:4021" ph="SELECT * FRO... City" />
-            <marker date="1505573386711" expanded="true" signature="4519:4605" ph="Select (SELE... " />
-            <marker date="1505573386711" expanded="true" signature="4519:4744" ph="Select * FRO... personbook" />
-            <marker date="1505573386711" expanded="true" signature="4519:4749" ph="Select (SELE... personbook" />
-            <marker date="1505573386711" expanded="true" signature="4552:4604" ph="SELECT Surna... person" />
-            <marker date="1505573386711" expanded="true" signature="4644:4691" ph="SELECT BookN... book" />
-            <marker date="1505573386711" expanded="true" signature="5707:5753" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="5707:5763" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="5846:5867" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="5846:5902" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="6139:6162" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="6139:6174" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="6139:6175" ph="UPDATE city " />
-            <marker date="1505573386711" expanded="true" signature="6814:6836" ph="INSERT city... " />
-            <marker date="1505573386711" expanded="true" signature="7426:7455" ph="DELETE FROM " />
+            <element signature="method#DeleteDataCity#0;class#Aplication#0" expanded="false" />
+            <element signature="method#CallProcedureForInsertToPersonBook#0;class#Aplication#0" expanded="false" />
+            <marker date="1505580001528" expanded="true" signature="2043:2070" ph="SELECT COUNT... Person" />
+            <marker date="1505580001528" expanded="true" signature="2446:2466" ph="SELECT * FRO... Person" />
+            <marker date="1505580001528" expanded="true" signature="3283:3301" ph="SELECT * FRO... Book" />
+            <marker date="1505580001528" expanded="true" signature="4054:4072" ph="SELECT * FRO... City" />
+            <marker date="1505580001528" expanded="true" signature="4570:4656" ph="Select (SELE... " />
+            <marker date="1505580001528" expanded="true" signature="4570:4795" ph="Select * FRO... personbook" />
+            <marker date="1505580001528" expanded="true" signature="4570:4800" ph="Select (SELE... personbook" />
+            <marker date="1505580001528" expanded="true" signature="4603:4655" ph="SELECT Surna... person" />
+            <marker date="1505580001528" expanded="true" signature="4695:4742" ph="SELECT BookN... book" />
+            <marker date="1505580001528" expanded="true" signature="5758:5804" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="5758:5814" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="5897:5918" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="5897:5953" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="6190:6213" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="6190:6225" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="6190:6226" ph="UPDATE city " />
+            <marker date="1505580001528" expanded="true" signature="6865:6887" ph="INSERT city... " />
+            <marker date="1505580001528" expanded="true" signature="7477:7506" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

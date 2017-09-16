@@ -21,112 +21,121 @@
     <table id="15" parent="2" name="city"/>
     <table id="16" parent="2" name="person"/>
     <table id="17" parent="2" name="personbook"/>
-    <column id="18" parent="14" name="IDBook">
+    <routine id="18" parent="2" name="InsertPersonBook">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="19" parent="14" name="IDBook">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="19" parent="14" name="BookName">
+    <column id="20" parent="14" name="BookName">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="14" name="Author">
+    <column id="21" parent="14" name="Author">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="14" name="Amount">
+    <column id="22" parent="14" name="Amount">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="22" parent="14" name="PRIMARY">
+    <key id="23" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>IDBook</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="23" parent="15" name="City">
+    <column id="24" parent="15" name="City">
       <Position>1</Position>
       <DataType>varchar(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="24" parent="15" name="PRIMARY">
+    <key id="25" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>City</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="25" parent="16" name="IDPerson">
+    <column id="26" parent="16" name="IDPerson">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="16" name="Surname">
+    <column id="27" parent="16" name="Surname">
       <Position>2</Position>
       <DataType>varchar(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="16" name="Name">
+    <column id="28" parent="16" name="Name">
       <Position>3</Position>
       <DataType>varchar(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="16" name="City">
+    <column id="29" parent="16" name="City">
       <Position>4</Position>
       <DataType>varchar(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="16" name="Email">
+    <column id="30" parent="16" name="Email">
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <index id="30" parent="16" name="person_ibfk_1">
+    <index id="31" parent="16" name="person_ibfk_1">
       <ColNames>City</ColNames>
     </index>
-    <key id="31" parent="16" name="PRIMARY">
+    <key id="32" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>IDPerson</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="32" parent="16" name="person_ibfk_1">
+    <foreign-key id="33" parent="16" name="person_ibfk_1">
       <ColNames>City</ColNames>
       <RefSchemaName>db_jdbc</RefSchemaName>
       <RefTableName>city</RefTableName>
       <RefColNames>City</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="33" parent="17" name="IDPerson">
+    <column id="34" parent="17" name="IDPerson">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="17" name="IDBook">
+    <column id="35" parent="17" name="IDBook">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="35" parent="17" name="personbook_ibfk_2">
+    <index id="36" parent="17" name="personbook_ibfk_2">
       <ColNames>IDBook</ColNames>
     </index>
-    <key id="36" parent="17" name="PRIMARY">
+    <key id="37" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>IDPerson
 IDBook</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="37" parent="17" name="personbook_ibfk_1">
+    <foreign-key id="38" parent="17" name="personbook_ibfk_1">
       <ColNames>IDPerson</ColNames>
       <RefSchemaName>db_jdbc</RefSchemaName>
       <RefTableName>person</RefTableName>
       <RefColNames>IDPerson</RefColNames>
     </foreign-key>
-    <foreign-key id="38" parent="17" name="personbook_ibfk_2">
+    <foreign-key id="39" parent="17" name="personbook_ibfk_2">
       <ColNames>IDBook</ColNames>
       <RefSchemaName>db_jdbc</RefSchemaName>
       <RefTableName>book</RefTableName>
       <RefColNames>IDBook</RefColNames>
     </foreign-key>
+    <argument id="40" parent="18" name="SurmanePersonIn">
+      <DataType>varchar(25)|0</DataType>
+    </argument>
+    <argument id="41" parent="18" name="BookNameIN">
+      <DataType>varchar(45)|0</DataType>
+    </argument>
   </database-model>
 </dataSource>

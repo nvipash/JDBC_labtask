@@ -37,6 +37,8 @@ public class Aplication {
 
             //DeleteDataCity();
 
+            CallProcedureForInsertToPersonBook();
+
 
         } catch (ClassNotFoundException e) {
             System.out.println("MySQL Driver is not loaded");
@@ -194,6 +196,28 @@ public class Aplication {
         int n=preparedStatement.executeUpdate();
         System.out.println("Count rows that deleted: "+n);
     }
+
+    private static void CallProcedureForInsertToPersonBook() throws SQLException {
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nInput Surname for Person: ");
+        String surname = input.next();
+        System.out.println("Input NameBook for Book: ");
+        String book = input.next();
+
+        CallableStatement callableStatement;
+        callableStatement= connection.prepareCall("{call InsertPersonBook(?, ?)}");
+        callableStatement.setString("SurmanePersonIn",surname);
+        callableStatement.setString("BookNameIN",book);
+        ResultSet rs = callableStatement.executeQuery();
+
+        while (rs.next())
+        {
+            String msg = rs.getString(1);
+            // Simply Print the results
+            System.out.format("\nResult: "+msg);
+        }
+    }
+
 
 
 }
