@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class Aplication {
-    private static final String url = "jdbc:mysql://localhost:3306/db_jdbc";
+    private static final String url = "jdbc:mysql://localhost:3306/db_jdbc?serverTimezone=UTC";
     private static final String user = "root";
     private static final String password = "123456";
 
@@ -37,7 +37,7 @@ public class Aplication {
 
             //DeleteDataCity();
 
-            CallProcedureForInsertToPersonBook();
+            //CallProcedureForInsertToPersonBook();
 
 
         } catch (ClassNotFoundException e) {

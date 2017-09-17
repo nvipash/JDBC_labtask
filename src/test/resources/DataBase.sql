@@ -35,12 +35,12 @@ CREATE TABLE Book
 
 
 CREATE TABLE  PersonBook (
-  Person_IDPerson INT NOT NULL,
-  Book_IDBook INT NOT NULL,
-  PRIMARY KEY (Person_IDPerson, Book_IDBook),
-  CONSTRAINT  FOREIGN KEY (Person_IDPerson)
+  IDPerson INT NOT NULL,
+  IDBook INT NOT NULL,
+  PRIMARY KEY (IDPerson, IDBook),
+  CONSTRAINT  FOREIGN KEY (IDPerson)
     REFERENCES  Person (IDPerson),
-  CONSTRAINT   FOREIGN KEY (Book_IDBook)
+  CONSTRAINT   FOREIGN KEY (IDBook)
     REFERENCES  Book (IDBook)
 ) ENGINE = InnoDB;
 
