@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a907c3a-731c-46cd-a342-cdbc38654ac5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.keystream" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.keystream.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata.values.at" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata_i" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_metadata_/metadata_i.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/_src_/schema/db_jdbc.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7/storage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/DataBase.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/softserve/jdbctest/Aplication.class" afterPath="$PROJECT_DIR$/target/classes/com/softserve/jdbctest/Aplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7c091cad-7800-4d48-acaf-48b96ed61ab7.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softserve/jdbctest/Aplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/jdbctest/Aplication.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -392,7 +379,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505502036666</updated>
-      <workItem from="1505502038532" duration="22730000" />
+      <workItem from="1505502038532" duration="22861000" />
     </task>
     <task id="LOCAL-00001" summary="Create new project JDBC Driver">
       <created>1505571687635</created>
@@ -412,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22730000" />
+    <option name="totallyTimeSpent" value="22861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
