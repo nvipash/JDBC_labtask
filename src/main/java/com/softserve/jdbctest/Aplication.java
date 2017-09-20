@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class Aplication {
-    private static final String url = "jdbc:mysql://localhost:3306/db_jdbc?serverTimezone=UTC";
+    private static final String url = "jdbc:mysql://localhost:3306/db_jdbc?serverTimezone=UTC&useSSL=false";
     private static final String user = "root";
     private static final String password = "123456";
 
@@ -28,10 +28,10 @@ public class Aplication {
             statement=connection.createStatement();
             //endregion
 
-            readData();
-
-            //updateDataCity();
             //readData();
+
+            updateDataCity();
+            readData();
 
             //insertDataCity();
 
@@ -65,7 +65,7 @@ public class Aplication {
             while (rs.next()) {
                 int count = rs.getInt(1);
                 // Simply Print the results
-                System.out.format("count: %d\n", count);
+                System.out.format("\ncount: %d\n", count);
             }
             //endregion
 
