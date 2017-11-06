@@ -1,14 +1,11 @@
-
-CREATE SCHEMA IF NOT EXISTS `DB_JDBC` DEFAULT CHARACTER SET utf8 ;
-USE `DB_JDBC` ;
+CREATE SCHEMA IF NOT EXISTS `DB_JDBC` DEFAULT CHARACTER SET utf8;
+USE `DB_JDBC`;
 
 CREATE TABLE City 
 (
   City VARCHAR(25) NOT NULL,
   PRIMARY KEY (City)
 ) ENGINE = InnoDB;
-
-
 
 CREATE TABLE  Person 
 (
@@ -22,8 +19,6 @@ CREATE TABLE  Person
     REFERENCES City (City)
 ) ENGINE = InnoDB;
 
-
-
 CREATE TABLE Book 
 (
   IDBook INT NOT NULL AUTO_INCREMENT,
@@ -32,7 +27,6 @@ CREATE TABLE Book
   Amount INT NOT NULL,
   PRIMARY KEY (IDBook)
 ) ENGINE = InnoDB;
-
 
 CREATE TABLE  PersonBook (
   IDPerson INT NOT NULL,
@@ -43,7 +37,6 @@ CREATE TABLE  PersonBook (
   CONSTRAINT   FOREIGN KEY (IDBook)
     REFERENCES  Book (IDBook)
 ) ENGINE = InnoDB;
-
 
 INSERT INTO `book` VALUES 
 (1,'Bible','St. mans',5),
@@ -76,22 +69,22 @@ IN BookNameIN varchar(45)
 BEGIN
 	DECLARE msg varchar(40);
     
-    -- checks for present Surname
-    IF NOT EXISTS( SELECT * FROM Person WHERE Surname=SurmanePersonIn)
-		THEN SET msg = 'This Surname is absent';
+  -- checks for present Surname
+  IF NOT EXISTS( SELECT * FROM Person WHERE Surname=SurmanePersonIn)
+  THEN SET msg = 'This Surname is absent';
     
-    -- checks for present Book  
+  -- checks for present Book
 	ELSEIF NOT EXISTS( SELECT * FROM Book WHERE BookName=BookNameIN)
 		THEN SET msg = 'This Book is absent';
     
-    -- checks if there are this combination already  
+  -- checks if there are this combination already
 	ELSEIF EXISTS( SELECT * FROM personbook 
 		WHERE IDPerson = (SELECT IDPerson FROM Person WHERE Surname=SurmanePersonIn)
         AND IDBook = (SELECT IDBook FROM Book WHERE BookName=BookNameIN)
         )
         THEN SET msg = 'This Person already has this book';
 	
-    -- checks whether there is still such a book 
+  -- checks whether there is still such a book
 	ELSEIF (SELECT Amount FROM Book WHERE BookName=BookNameIN ) 
     <= (SELECT COUNT(*) FROM personbook WHERE IDBook=(SELECT IDBook FROM Book WHERE BookName=BookNameIN) )
     THEN SET msg = 'There are no this Book already';
