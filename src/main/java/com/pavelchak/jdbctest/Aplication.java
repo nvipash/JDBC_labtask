@@ -1,4 +1,4 @@
-package com.softserve.jdbctest;
+package com.pavelchak.jdbctest;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -28,16 +28,16 @@ public class Aplication {
             statement=connection.createStatement();
             //endregion
 
-            //readData();
-
-            updateDataCity();
             readData();
 
-            //insertDataCity();
+//            updateDataCity();
+//            readData();
 
-            //DeleteDataCity();
+//            insertDataCity();
 
-            //CallProcedureForInsertToPersonBook();
+//            DeleteDataCity();
+
+//            CallProcedureForInsertToPersonBook();
 
 
         } catch (ClassNotFoundException e) {
