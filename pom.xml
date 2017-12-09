@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>myfirstJDBC</groupId>
-    <artifactId>AndriiJDBC</artifactId>
+    <artifactId>JDBC_lab5a</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -13,8 +13,9 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
+            <version>5.1.44</version>
         </dependency>
+
 
 
     </dependencies>
