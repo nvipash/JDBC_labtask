@@ -4,20 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>myfirstJDBC</groupId>
-    <artifactId>JDBC_lab5a</artifactId>
+    <groupId>iot.novitskiy</groupId>
+    <artifactId>iot.novitskiy</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.44</version>
+            <version>5.1.6</version>
         </dependency>
-
-
-
     </dependencies>
 
 </project>

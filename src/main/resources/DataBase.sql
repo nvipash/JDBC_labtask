@@ -1,92 +1,96 @@
-drop schema if exists lab_5a;
-create schema if not exists lab_5a;
-use lab_5a;
+CREATE DATABASE IF NOT EXISTS lab_5;
+USE lab_5;
 
-drop table if exists train;
-create table if not exists train 
+CREATE TABLE IF NOT EXISTS train (
+    id_train INT AUTO_INCREMENT PRIMARY KEY,
+    number_train VARCHAR(4) NOT NULL,
+    CONSTRAINT train_id_uindex UNIQUE (id_train)
+);
+
+
+CREATE TABLE IF NOT EXISTS coach (
+    id_coach INT AUTO_INCREMENT PRIMARY KEY,
+    number_place INT NOT NULL,
+    type_coach VARCHAR(15) NOT NULL,
+    number_coach VARCHAR(4) NOT NULL,
+    train_id INT NOT NULL,
+    CONSTRAINT coach_id_uindex UNIQUE (id_coach),
+    CONSTRAINT coach_street_id_fk FOREIGN KEY (train_id)
+        REFERENCES train (id_train)
+);
+
+
+CREATE TABLE ticket (
+    id_ticket INT AUTO_INCREMENT PRIMARY KEY,
+    date_departuere DATE NOT NULL,
+    place_departuere VARCHAR(25) NOT NULL,
+    place_arrival VARCHAR(25) NOT NULL,
+    price_ticket INT NOT NULL,
+    CONSTRAINT ticket_id_uindex UNIQUE (id_ticket)
+);
+
+
+CREATE TABLE IF NOT EXISTS ticket_coach (
+    ticket_id INT NOT NULL,
+    coach_id INT NULL,
+    coach_number INT NULL,
+    CONSTRAINT ticket_coach_pharmacy_id_fk FOREIGN KEY (ticket_id)
+        REFERENCES coach (id_coach),
+    CONSTRAINT ticket_coach_medicines_id_fk FOREIGN KEY (coach_id)
+        REFERENCES ticket (id_ticket)
+);
+
+CREATE INDEX ticket_coach_coach_id_fk
+  ON ticket_coach (coach_id);
+
+
+insert into train (number_train) values
+				  ('122П'),
+				  ('891Р'),
+			      ('98Ж'),
+				  ('142В'),
+				  ('22М');
+
+insert into coach (number_place, type_coach, number_coach, train_id) values
+				  (32,'kupe', 13, 1),
+			      (54,'plackart', 21, 2),
+				  (12,'lux', 2, 3),
+				  (3,'plackart', 23, 4),
+				  (22,'lux', 5, 5);
+
+insert into ticket (date_departuere, place_departuere, place_arrival, price_ticket) values
+				   ('2017-10-09', 'Lviv', 'Kyiv', 128),
+				   ('2018-06-29', 'Dnipro','Chernivtsi', 87),
+				   ('2017-02-05', 'Zaporizha', 'Uzhorod', 147),
+				   ('2017-04-22', 'Rivne','Kropyvnitskyi', 122),
+				   ('2017-04-22', 'Chonhar', 'Kropyvnitskyi', 90);
+
+insert ticket_coach (ticket_id, coach_id, coach_number) values (1, 11, 42), (2, 22, 34), (3, 33, 18), (4, 44, 2)
+
+DELIMITER //
+DROP PROCEDURE IF EXISTS InsertCoach;//
+
+CREATE PROCEDURE InsertCoach
 (
-    id_train 			int auto_increment primary key,
-    number_train 		int not null,
-    type_train 			varchar(25) not null,
-    photo_train		    varchar(25) not null,
-    
-    constraint train_id_train_uindex
-		UNIQUE (id_train)
-)ENGINE = InnoDB;
+IN number_place_in   int,
+IN type_coach_in        varchar(15),
+IN number_coach_in   varchar(4),
+in train_in          VARCHAR(15)
+)
+BEGIN
+	DECLARE msg varchar(40);
 
-drop table if exists coach;
-create table if not exists coach
-(
-	id_coach              int auto_increment primary key,
-	number_place		  int not null,
-	type_coach 			  varchar(25) not null,
-    number_coach 		  int not null,
-    
-    constraint coach_id_coach_uindex
-		UNIQUE (id_coach),
-	constraint coach_train_id_fk
-		foreign key (id_coach) references train (id_train)
-)ENGINE = InnoDB;
+  IF NOT EXISTS( SELECT * FROM train WHERE number_train = train_in)
+    THEN SET msg = 'This coach is absent';
+  ELSE
+		INSERT coach (number_place, type_coach, number_coach, train_id)
+        Value (number_place_in, type_coach_in, number_coach_in,
+			     (SELECT id_train FROM train WHERE train.number_train = train_in) );
+		SET msg = 'OK';
 
-alter table coach
-	add constraint CK_number_place
-	check (number_place > 1 AND number_place < 56);
+	END IF;
 
-drop table if exists ticket;
-create table if not exists ticket
-(
-	id_ticket             int auto_increment primary key,
-	date_departuere       date not null,
-	place_departuere	  varchar(25) not null,
-	tram_schedule         text not null,
-	place_arrival		  varchar(25) not null,
-	price_ticket		  int not null,
-	status_ticket         varchar(25) not null,
-    
-	constraint ticket_id_ticket_uindex
-	UNIQUE (id_ticket)
-)ENGINE = InnoDB;
+	SELECT msg AS msg;
 
-alter table ticket
-	add constraint CK_price_ticket
-	check (price_ticket >= 5),
-	add constraint CK_status_ticket
-	check (status_ticket in ('free', 'sold', 'booked'));
-
-drop table if exists ticket_coach;
-create table if not exists ticket_coach 
-(
-	ticket_id int auto_increment,
-    coach_id int not null default 50,
-    primary key (ticket_id, coach_id),
-    
-    constraint ticketcoach_coach_id_fk 
-		foreign key (coach_id) references coach (id_coach),
-
-	constraint ticketcoach_ticket_id_fk
-		foreign key (ticket_id) references ticket (id_ticket)
-)ENGINE = InnoDB;
-
-create index ticket_coach_coach_id_fk
-  on ticket_coach (coach_id);
-
-insert into train (number_train, type_train, photo_train) values
-				  (122,'high-speed','photo-1'),
-				  (891,'low-speed','photo-2'),
-			      (98,'electric-regional','photo-3'),
-				  (142,'low-speed','photo-4'),
-				  (22,'electric-regional','photo-5');
-
-insert into coach (number_place, type_coach, number_coach) values
-				  (32,'kupe', 13),
-			      (54,'plackart', 21),
-				  (12,'lux', 2),
-				  (3,'plackart', 23),
-				  (22,'lux', 5);
-
-insert into ticket (date_departuere, place_departuere, tram_schedule, place_arrival, price_ticket, status_ticket) values 
-				   ('2017-10-09', 'Lviv','shedule-1', 'Kyiv', 15, 'booked'),
-				   ('2018-06-29', 'Dnipro','shedule-2', 'Chernivtsi', 28, 'sold'),
-				   ('2017-02-05', 'Zaporizha','shedule-2', 'Uzhorod', 32, 'free'),
-				   ('2017-04-22', 'Rivne','shedule-2', 'Kropyvnitskyi', 32, 'free'),
-				   ('2017-04-22', 'Chonhar','shedule-1', 'Kropyvnitskyi', 32, 'free');
+END //
+DELIMITER ;
